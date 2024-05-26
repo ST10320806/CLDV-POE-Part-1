@@ -1,4 +1,7 @@
-﻿
+﻿@model POE1.Models.userTable
+@{
+    ViewData["Title"] = "Sign Up";
+}
 @{
     ViewData["Title"] = "About Us";
 }
@@ -24,3 +27,12 @@
     <p>She oversees the entire customer experience department, which offers customer support and ensures customer satisfaction</p>
     <p>If you have any feedback, contact us <a href="https://jesse-weeder.azurewebsites.net/Home/ContactUs">HERE</a>.</p></p>
 </div>
+<body>
+    <form action="About" method="post">
+        <p>Sign Up</p>
+        <input type="text" name="Name" placeholder="Name" required>
+        <input type="text" name="Surname" placeholder="Surname" required>
+        <input type="text" name="Email" placeholder="example@gmail.com" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
