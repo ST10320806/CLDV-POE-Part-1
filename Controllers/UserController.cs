@@ -1,8 +1,7 @@
-﻿using KhumaloCraft.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using POE1.Models;
 
-namespace KhumaloCraft.Controllers
+namespace POE1.Controllers
 {
     public class UserController : Controller
     {
@@ -14,7 +13,7 @@ namespace KhumaloCraft.Controllers
         public ActionResult About(userTable Users)
         {
             var result = usrtbl.insert_User(Users);
-            return RedirectToAction("Privacy", "Home");
+            return RedirectToAction("Login", "Home");
         }
 
         [HttpGet]

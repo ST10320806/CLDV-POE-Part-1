@@ -1,7 +1,7 @@
-﻿using KhumaloCraft.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using POE1.Models;
 
-namespace KhumaloCraft.Controllers
+namespace POE1.Controllers
 {
     public class ProductController : Controller
     {

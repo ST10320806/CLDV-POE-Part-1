@@ -1,4 +1,4 @@
-﻿@model POE1.Models.userTable
+﻿
 @{
     ViewData["Title"] = "Login";
 }
@@ -11,11 +11,10 @@
 </div>
 
 <body>
-    <form asp-controller="Login" asp-action="Privacy" method="post">
+    <form action="/Login/Privacy" method="post" align="center">
         <p>Please enter your first name and email:</p>
         <input type="text" name="name" placeholder="Name" required>
         <input type="text" name="email" placeholder="example@gmail.com" required>
         <button type="submit">Submit</button>
     </form>
-
 </body>

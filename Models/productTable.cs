@@ -1,15 +1,13 @@
-﻿using System.Data.SqlClient;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Data.SqlClient;
 
-namespace KhumaloCraft.Models
+namespace POE1.Models
 {
     public class productTable
     {
-        //public static string con_string = "Server=tcp:clouddev-sql-server.database.windows.net,1433;Initial Catalog=CLDVDatabase;Persist Security Info=False;User ID=Byron;Password=RockeyM12345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
-        public static string con_string = "Server=tcp:jesse-weeder-sql-server.database.windows.net,1433;Initial Catalog=jesse-weeder-db;Persist Security Info=False;User ID=Jesse;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        public static string con_string = "Server=tcp:matthew04-group.database.windows.net,1433;Initial Catalog=Matthew-DB;Persist Security Info=False;User ID=Matthew_ST10263027;Password=KaytiriIsBae05;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
 
         public static SqlConnection con = new SqlConnection(con_string);
-
-
         public int ProductID { get; set; }
 
         public string Name { get; set; }
@@ -76,7 +74,5 @@ namespace KhumaloCraft.Models
 
             return products;
         }
-
     }
 }
-

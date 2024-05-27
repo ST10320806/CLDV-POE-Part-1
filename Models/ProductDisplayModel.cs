@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 
-namespace KhumaloCraft.Models
+namespace POE1.Models
 {
-    public class ProductDisplayModel : Controller
+    public class ProductDisplayModel
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
@@ -11,8 +14,11 @@ namespace KhumaloCraft.Models
         public string ProductCategory { get; set; }
         public bool ProductAvailability { get; set; }
 
-        public ProductDisplayModel() { }
+        public ProductDisplayModel()
+        {
+        }
 
+        //Parameterized Constructor: This constructor takes five parameters (id, name, price, category, availability) and initializes the corresponding properties of ProductDisplayModel with the provided values.
         public ProductDisplayModel(int id, string name, decimal price, string category, bool availability)
         {
             ProductID = id;
@@ -26,7 +32,7 @@ namespace KhumaloCraft.Models
         {
             List<ProductDisplayModel> products = new List<ProductDisplayModel>();
 
-            string con_string = "Server=tcp:jesse-weeder-sql-server.database.windows.net,1433;Initial Catalog=jesse-weeder-db;Persist Security Info=False;User ID=Jesse;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string con_string = "Server=tcp:matthew04-group.database.windows.net,1433;Initial Catalog=Matthew-DB;Persist Security Info=False;User ID=Matthew_ST10263027;Password=KaytiriIsBae05;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
             using (SqlConnection con = new SqlConnection(con_string))
             {
                 string sql = "SELECT ProductID, ProductName, ProductPrice, ProductCategory, ProductAvailability FROM productTable";

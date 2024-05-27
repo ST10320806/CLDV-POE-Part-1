@@ -1,3 +1,5 @@
+using POE1;
+
 namespace POE1
 {
     public class Program
@@ -5,7 +7,7 @@ namespace POE1
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -32,5 +34,6 @@ namespace POE1
 
             app.Run();
         }
+       
     }
 }

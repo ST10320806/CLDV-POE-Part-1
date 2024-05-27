@@ -1,8 +1,8 @@
-﻿using KhumaloCraft.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using POE1.Models;
 using System.Data.SqlClient;
 
-namespace KhumaloCraft.Controllers
+namespace POE1.Controllers
 {
     public class TransactionController : Controller
     {

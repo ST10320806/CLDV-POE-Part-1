@@ -1,3 +1,5 @@
+﻿
+
 namespace POE1.Models
 {
     public class ErrorViewModel
