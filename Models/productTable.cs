@@ -5,7 +5,7 @@ namespace POE1.Models
 {
     public class productTable
     {
-        public static string con_string = "Server=tcp:matthew04-group.database.windows.net,1433;Initial Catalog=Matthew-DB;Persist Security Info=False;User ID=Matthew_ST10263027;Password=KaytiriIsBae05;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
+        public static string con_string = "Server=tcp:jesse-weeder-sql-server.database.windows.net,1433;Initial Catalog=jesse-weeder-db;Persist Security Info=False;User ID=Jesse;Password=082Minute;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
 
         public static SqlConnection con = new SqlConnection(con_string);
         public int ProductID { get; set; }
@@ -25,9 +25,9 @@ namespace POE1.Models
 
             try
             {
-                string sql = "INSERT INTO productTable (productName, productPrice, productCategory, productAvailability) VALUES (@Name, @Price, @Category, @Availability)";
+                string sql = "INSERT INTO productTable (productID, price, category, availability) VALUES (@Name, @Price, @Category, @Availability)";
                 SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@Name", p.Name);
+                cmd.Parameters.AddWithValue("@ID", p.ProductID);
                 cmd.Parameters.AddWithValue("@Price", p.Price);
                 cmd.Parameters.AddWithValue("@Category", p.Category);
                 cmd.Parameters.AddWithValue("@Availability", p.Availability);
@@ -63,10 +63,10 @@ namespace POE1.Models
                 {
                     productTable product = new productTable();
                     product.ProductID = Convert.ToInt32(rdr["productID"]);
-                    product.Name = rdr["productName"].ToString();
-                    product.Price = rdr["productPrice"].ToString();
-                    product.Category = rdr["productCategory"].ToString();
-                    product.Availability = rdr["productAvailability"].ToString();
+                    product.Name = rdr["productID"].ToString();
+                    product.Price = rdr["price"].ToString();
+                    product.Category = rdr["category"].ToString();
+                    product.Availability = rdr["availability"].ToString();
 
                     products.Add(product);
                 }

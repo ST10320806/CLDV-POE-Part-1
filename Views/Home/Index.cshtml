@@ -15,23 +15,22 @@
     <br />
     <p><a href="https://jesse-weeder.azurewebsites.net/Home/About">Find out more about us</a></p>
 </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Application</title>
+</head>
+<body style="background-color: cornsilk;">
+</body>
 
-@if (userID != null)
-{
-    <p>User ID: @userID</p>
-}
 
-@if (userID != null)
-{
-    <p>User ID: @userID</p>
-}
 
 <h2>All Products</h2>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Name</th>
+            <th>ID</th>
             <th>Price</th>
             <th>Category</th>
             <th>Availability</th>
@@ -42,7 +41,7 @@
         @foreach (var product in products)
         {
             <tr>
-                <td>@product.Name</td>
+                <td>@product.ProductID</td>
                 <td>@product.Price</td>
                 <td>@product.Category</td>
                 <td>@product.Availability</td>
@@ -57,11 +56,4 @@
         }
     </tbody>
 </table>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Web Application</title>
-</head>
-<body style="background-color: cornsilk;">
-</body>
+   

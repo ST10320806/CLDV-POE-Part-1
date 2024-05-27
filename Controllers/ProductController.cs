@@ -10,14 +10,14 @@ namespace POE1.Controllers
 
 
         [HttpPost]
-        public ActionResult MyWork(productTable products)
+        public ActionResult MyWorkPage(productTable products)
         {
             var result2 = prodtbl.insert_product(products);
             return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
-        public ActionResult MyWork()
+        public ActionResult MyWorkPage()
         {
             return View(prodtbl);
         }
