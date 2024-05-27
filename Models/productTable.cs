@@ -63,7 +63,6 @@ namespace POE1.Models
                 {
                     productTable product = new productTable();
                     product.ProductID = Convert.ToInt32(rdr["productID"]);
-                    product.Name = rdr["productID"].ToString();
                     product.Price = rdr["price"].ToString();
                     product.Category = rdr["category"].ToString();
                     product.Availability = rdr["availability"].ToString();

@@ -1,7 +1,9 @@
-﻿using System.Diagnostics;
-using System.Collections.Generic;
+﻿using POE1.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using POE1.Models;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace POE1.Controllers
 {
@@ -36,7 +38,7 @@ namespace POE1.Controllers
             return View();
         }
 
-        public IActionResult AboutUs()
+        public IActionResult About()
         {
             return View();
         }
@@ -46,7 +48,7 @@ namespace POE1.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Login()
         {
             return View();
         }
@@ -63,3 +65,4 @@ namespace POE1.Controllers
         }
     }
 }
+
